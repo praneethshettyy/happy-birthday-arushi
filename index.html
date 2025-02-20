@@ -581,6 +581,31 @@
             font-size: 14px;
             color: #757575;
         }
+        .memory-img {
+            width: 100%;
+            height: 150px; /* or whatever height you want */
+            object-fit: cover; /* this makes the image cover the container without distortion */
+            border-radius: 8px 8px 0 0; /* rounded corners at top */
+        }
+
+        .memory {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 250px;
+            overflow: hidden;
+            transform: rotate(calc(var(--rotation) * 1deg));
+            transition: transform 0.3s ease;
+        }
+
+        .memory:hover {
+            transform: rotate(0) scale(1.05);
+        }
+
+        .memory p {
+            padding: 15px;
+            margin: 0;
+        }
     </style>
 </head>
 <body>
@@ -635,11 +660,12 @@
                 <div class="mood-booster-header">Reasons I Love You</div>
                 <div class="mood-booster-content">
                     <div id="reasonText">Your pretty eyes, beautiful hair, cure personality literally everything about you im just so in love with you baby.</div>
+                    <button id="newReasonBtn" style="margin-top: 20px; padding: 8px 15px; background: #e91e63; color: white; border: none; border-radius: 5px; cursor: pointer;">Next Reason ❤️</button>
                 </div>
             </div>
             
             <div class="mood-booster">
-                <div class="mood-booster-header">Daily Quote</div>
+                <div class="mood-booster-header">Remeber this</div>
                 <div class="mood-booster-content">
                     <div class="daily-quote">"Distance means so little when someone means so much. The miles between us don't matter because in the end, we'll always find our way back to each other."</div>
                 </div>
@@ -676,7 +702,7 @@
             <div class="love-language">
                 <div class="love-language-icon">🎁</div>
                 <h3>Receiving Gifts</h3>
-                <p>Little surprises to show I'm thinking of you always.</p>
+                <p>I'm literally giving myself as a lifetime gift for you, I'm yours and yours only.</p>
             </div>
             
             <div class="love-language">
@@ -695,7 +721,7 @@
         <div class="message">
             <h2>To The Birthday Girl Who Has My Heart</h2>
             <p>
-                Even though we're separated by the mountains and plains between Jammu and Karnataka, my thoughts travel to you instantly, crossing 2,206 kilometers in the blink of an eye.
+                Even though we're separated by the mountains and plain, my thoughts travel to you instantly, crossing miles in the blink of an eye.
             </p>
             <p>
                 On your special day, I want you to know that distance has only made my appreciation for you grow stronger. Your strength in maintaining our connection despite the miles between us shows me the depth of your character and the warmth of your heart.
@@ -712,11 +738,11 @@
         
         <!-- Navigation Buttons -->
         <div class="navigation-buttons">
-            <a href="stats.html" class="nav-button memories-btn">
+            <a href="gen-stat/stats.html" class="nav-button memories-btn">
                 <span class="icon">📷</span>
                 Our Memories
             </a>
-            <a href="https://praneethshettyy.github.io/arushi-praneeth/" class="nav-button surprise-btn">
+            <a href="love-stat/love_analysis.html" class="nav-button surprise-btn">
                 <span class="icon">🎁</span>
                 Our Conversations
             </a>
@@ -729,32 +755,32 @@
                 <div class="timeline-event">
                     <div class="timeline-dot"></div>
                     <div class="timeline-content">
-                        <div class="timeline-date">Next Month</div>
-                        <p>Our next video date night under the same moon</p>
+                        <div class="timeline-date">Care</div>
+                        <p>Supporting our goals and staying by each other's side</p>
                     </div>
                 </div>
                 
                 <div class="timeline-event">
                     <div class="timeline-dot"></div>
                     <div class="timeline-content">
-                        <div class="timeline-date">3 Months</div>
-                        <p>Planning our next meet in person</p>
-                    </div>
-                </div>
-                
-                <div class="timeline-event">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-date">6 Months</div>
-                        <p>Weekend getaway to our favorite place</p>
-                    </div>
-                </div>
-                
-                <div class="timeline-event">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-date">1 Year</div>
+                        <div class="timeline-date">Against all the odds</div>
                         <p>Closing the distance between us forever</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-event">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">Home</div>
+                        <p>Getting married to each other, and sharing home</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-event">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">Us</div>
+                        <p>Having a beautiful family of us, with lots of pets and birbs</p>
                     </div>
                 </div>
             </div>
@@ -776,23 +802,23 @@
                 </div>
                 <div class="date-card">
                     <div class="date-icon">🤍</div>
-                    <div class="date-title">First confess</div>
+                    <div class="date-title">First Confess</div>
                     <div class="date-value">21-12-2024</div>
                 </div>
                 <div class="date-card">
-                    <div class="date-icon">✈️</div>
-                    <div class="date-title">First Visit</div>
-                    <div class="date-value">[Date]</div>
+                    <div class="date-icon">📞</div>
+                    <div class="date-title">First Call</div>
+                    <div class="date-value">19-01-2025</div>
                 </div>
                 <div class="date-card">
-                    <div class="date-icon">🎂</div>
-                    <div class="date-title">Your Birthday</div>
-                    <div class="date-value">[Today!]</div>
+                    <div class="date-icon">🍿</div>
+                    <div class="date-title">First Movie Night</div>
+                    <div class="date-value">29-12-2024</div>
                 </div>
                 <div class="date-card">
-                    <div class="date-icon">⏱️</div>
-                    <div class="date-title">Next Meeting</div>
-                    <div class="date-value">[Date]</div>
+                    <div class="date-icon">🎎</div>
+                    <div class="date-title">First matching outfit</div>
+                    <div class="date-value">31-12-2024</div>
                 </div>
             </div>
         </div>
@@ -833,28 +859,48 @@
         // Generate memory cards
         function generateMemories() {
             const memories = document.getElementById('memories');
-            const memoryTexts = [
-                "Our first video call that lasted for hours",
-                "When you sent me that surprise gift",
-                "Our late night conversations about our dreams",
-                "When we discovered we both love the same obscure song",
-                "The time we watched the same movie together while on call",
-                "When you helped me through that difficult day"
+            const memoryData = [
+                {
+                    text: "Our first conversation on 20th oct never thought, it will take us this far to a point where I cannot live without you anymore.",
+                    image: "static/cat1.jpeg"
+                },
+                {
+                    text: "The time when I was being stupid and thinking US stands for united states, you should stop making fun of me for that",
+                    image: "static/birb1.jpeg"
+                },
+                {
+                    text: "All the long and long message spam when I was busy with work, I still remember those you're very cute I hope you know that and ofcourse the legendary hamster GIF spam.",
+                    image: "static/cat2.jpeg"
+                },
+                {
+                    text: "Since i was not much active in discord, I had to add you in other socials I was hesitant but did ask for your IG and Phone, from there many things were changed between us.",
+                    image: "static/birb2.jpeg"
+                },
+                {
+                    text: "You know our chats getting closer to half a million, and I'm sure every one of them brought a smile in my face. You have never been annoying to me or made me sad, Thank you.",
+                    image: "static/cat3.jpeg"
+                },
+                {
+                    text: "When you helped me through that difficult day",
+                    image: "static/birb3.jpeg"
+                }
             ];
             
-            memoryTexts.forEach((text, index) => {
+            memoryData.forEach((memory, index) => {
                 const card = document.createElement('div');
                 card.classList.add('memory');
                 card.style.setProperty('--rotation', Math.random() * 6 - 3);
                 
-                const imgPlaceholder = document.createElement('div');
-                imgPlaceholder.classList.add('placeholder-img');
-                imgPlaceholder.textContent = "Memory " + (index + 1);
+                // Create an actual image element instead of a placeholder div
+                const img = document.createElement('img');
+                img.src = memory.image;
+                img.alt = "Memory " + (index + 1);
+                img.classList.add('memory-img');
                 
                 const description = document.createElement('p');
-                description.textContent = text;
+                description.textContent = memory.text;
                 
-                card.appendChild(imgPlaceholder);
+                card.appendChild(img);
                 card.appendChild(description);
                 
                 memories.appendChild(card);
@@ -863,16 +909,17 @@
 
         // Reasons I love you carousel
         const reasons = [
-            "Your smile lights up my world even from far away",
+            "Your eyes lights up my world even from far away",
             "The way you listen and truly hear me",
             "How passionate you are about things you care about",
-            "Your kindness toward everyone you meet",
+            "Your liking towards pets and birbs",
             "The strength you show every day",
-            "Your incredible sense of humor",
+            "Your incredible sense of humor, literally",
+            "The gentle soft hair of yours",
             "How you remember the little details",
             "The way you inspire me to be better",
             "Your patience with our long-distance situation",
-            "The sound of your laughter that I could listen to forever"
+            "The sound of your voice that I could listen to forever"
         ];
 
         let currentReasonIndex = 0;

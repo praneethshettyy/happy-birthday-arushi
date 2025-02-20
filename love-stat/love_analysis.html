@@ -1,0 +1,401 @@
+
+            <!DOCTYPE html>
+            <html lang="en">
+            <head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <title>Happy Birthday - Our Love Story in Data</title>
+                <style>
+                    * {
+                        margin: 0;
+                        padding: 0;
+                        box-sizing: border-box;
+                    }
+                    
+                    body { 
+                        font-family: 'Arial', sans-serif; 
+                        background-color: #ffefef;
+                        color: #333;
+                        overflow-x: hidden;
+                        position: relative;
+                        min-height: 100vh;
+                    }
+                    
+                    .heart {
+                        position: absolute;
+                        top: -100px;
+                        font-size: 2rem;
+                        z-index: 0;
+                        opacity: 0.8;
+                        animation: fall linear forwards;
+                        color: #e91e63;
+                    }
+                    
+                    .cake-container {
+                        text-align: center;
+                        margin: 30px 0;
+                        animation: float 3s ease-in-out infinite;
+                    }
+                    
+                    .cake {
+                        font-size: 5rem;
+                        margin-bottom: 10px;
+                    }
+                    
+                    @keyframes fall {
+                        to {
+                            transform: translateY(100vh);
+                        }
+                    }
+                    
+                    @keyframes float {
+                        0%, 100% {
+                            transform: translateY(0);
+                        }
+                        50% {
+                            transform: translateY(-10px);
+                        }
+                    }
+                    
+                    .container {
+                        max-width: 1200px;
+                        margin: 0 auto;
+                        padding: 20px;
+                        position: relative;
+                        z-index: 1;
+                    }
+                    
+                    h1 { 
+                        color: #e91e63; 
+                        text-align: center;
+                        margin: 20px 0;
+                        font-size: 2.5rem;
+                        text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+                        position: relative;
+                    }
+                    
+                    .birthday-banner {
+                        background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+                        padding: 20px;
+                        border-radius: 15px;
+                        text-align: center;
+                        margin-bottom: 30px;
+                        box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+                    }
+                    
+                    .birthday-banner h2 {
+                        color: white;
+                        margin-bottom: 10px;
+                        font-size: 1.8rem;
+                    }
+                    
+                    .birthday-banner p {
+                        color: white;
+                        font-size: 1.2rem;
+                    }
+                    
+                    .message {
+                        background: rgba(255,255,255,0.9);
+                        padding: 20px;
+                        border-radius: 15px;
+                        margin-bottom: 30px;
+                        box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+                        text-align: center;
+                    }
+                    
+                    .viz-container {
+                        display: grid;
+                        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+                        gap: 20px;
+                        justify-content: center;
+                    }
+                    
+                    .viz-card {
+                        border-radius: 15px;
+                        overflow: hidden;
+                        box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+                        transition: transform 0.3s ease, box-shadow 0.3s ease;
+                        position: relative;
+                        z-index: 1;
+                    }
+                    
+                    .viz-card:nth-child(1) {
+                        background: linear-gradient(135deg, #a18cd1 0%, #fbc2eb 100%);
+                    }
+                    
+                    .viz-card:nth-child(2) {
+                        background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+                    }
+                    
+                    .viz-card:nth-child(3) {
+                        background: linear-gradient(135deg, #fad0c4 0%, #f5576c 100%);
+                    }
+                    
+                    .viz-card:nth-child(4) {
+                        background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+                    }
+                    
+                    .viz-card:nth-child(5) {
+                        background: linear-gradient(135deg, #5ee7df 0%, #b490ca 100%);
+                    }
+                    
+                    .viz-card:nth-child(6) {
+                        background: linear-gradient(135deg, #c3cfe2 0%, #c471ed 100%);
+                    }
+                    
+                    .viz-card:nth-child(7) {
+                        background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+                    }
+                    
+                    .viz-card:nth-child(8) {
+                        background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+                    }
+                    
+                    .viz-card:hover {
+                        transform: translateY(-10px);
+                        box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+                    }
+                    
+                    .card-content {
+                        background: rgba(255,255,255,0.9);
+                        padding: 20px;
+                        text-align: center;
+                        height: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                    }
+                    
+                    .viz-card h3 {
+                        color: #e91e63;
+                        margin-bottom: 15px;
+                        font-size: 1.5rem;
+                    }
+                    
+                    .viz-card p {
+                        margin-bottom: 20px;
+                        font-size: 1rem;
+                        flex-grow: 1;
+                    }
+                    
+                    .viz-link {
+                        display: inline-block;
+                        padding: 12px 25px;
+                        background: #e91e63;
+                        color: white;
+                        text-decoration: none;
+                        border-radius: 30px;
+                        font-weight: bold;
+                        transition: background 0.3s, transform 0.2s;
+                        border: none;
+                        box-shadow: 0 4px 10px rgba(233,30,99,0.3);
+                    }
+                    
+                    .viz-link:hover {
+                        background: #c2185b;
+                        transform: scale(1.05);
+                    }
+                    
+                    .footer {
+                        text-align: center;
+                        margin-top: 50px;
+                        padding: 20px;
+                        border-top: 1px solid rgba(233,30,99,0.3);
+                        font-size: 0.9rem;
+                    }
+                    
+                    .heart-icon {
+                        color: #e91e63;
+                        margin: 0 5px;
+                        animation: pulse 1s infinite;
+                    }
+                    
+                    @keyframes pulse {
+                        0% {
+                            transform: scale(1);
+                        }
+                        50% {
+                            transform: scale(1.3);
+                        }
+                        100% {
+                            transform: scale(1);
+                        }
+                    }
+                    
+                    /* Media Queries for Responsiveness */
+                    @media (max-width: 768px) {
+                        h1 {
+                            font-size: 2rem;
+                        }
+                        
+                        .cake {
+                            font-size: 4rem;
+                        }
+                        
+                        .birthday-banner h2 {
+                            font-size: 1.5rem;
+                        }
+                        
+                        .birthday-banner p {
+                            font-size: 1rem;
+                        }
+                        
+                        .viz-container {
+                            grid-template-columns: 1fr;
+                        }
+                    }
+                    
+                    @media (max-width: 480px) {
+                        h1 {
+                            font-size: 1.8rem;
+                        }
+                        
+                        .cake {
+                            font-size: 3.5rem;
+                        }
+                        
+                        .container {
+                            padding: 10px;
+                        }
+                        
+                        .viz-card h3 {
+                            font-size: 1.3rem;
+                        }
+                    }
+                </style>
+            </head>
+            <body>
+                <div class="container">
+                    <div class="cake-container">
+                        <div class="cake">🎂</div>
+                    </div>
+                    
+                    <!-- <h1>Happy Birthday, My Love!</h1> -->
+                    
+                    <div class="birthday-banner">
+                        <h2>Our Love Story in Data</h2>
+                        <p>Every message, every word, telling our beautiful story together</p>
+                    </div>
+                    
+                    <div class="message">
+                        <p>I analyzed all our messages to show you how much we care for each other. Here's what I found...</p>
+                    </div>
+                    
+                    <div class="viz-container">
+                        <div class="viz-card">
+                            <div class="card-content">
+                                <h3>How We Express Love</h3>
+                                <p>See how we both express affection with different lovely phrases</p>
+                                <a class="viz-link" href="love_expression_comparison.html">View Chart</a>
+                            </div>
+                        </div>
+                        
+                        <div class="viz-card">
+                            <div class="card-content">
+                                <h3>Who Says "I Love You" More?</h3>
+                                <p>A sweet breakdown of our affectionate messages</p>
+                                <a class="viz-link" href="love_expression_proportion.html">View Chart</a>
+                            </div>
+                        </div>
+            
+                        <div class="viz-card">
+                            <div class="card-content">
+                                <h3>Our "Love You" Timeline</h3>
+                                <p>See how our "love you" messages have grown with our love</p>
+                                <a class="viz-link" href="love_timeline_love_you.html">View Chart</a>
+                            </div>
+                        </div>
+                    
+                        <div class="viz-card">
+                            <div class="card-content">
+                                <h3>Our "Miss You" Timeline</h3>
+                                <p>See how our "miss you" messages have grown with our love</p>
+                                <a class="viz-link" href="love_timeline_miss_you.html">View Chart</a>
+                            </div>
+                        </div>
+                    
+                        <div class="viz-card">
+                            <div class="card-content">
+                                <h3>Our "Kiss" Timeline</h3>
+                                <p>See how our "kiss" messages have grown with our love</p>
+                                <a class="viz-link" href="love_timeline_kiss.html">View Chart</a>
+                            </div>
+                        </div>
+                    
+                        <div class="viz-card">
+                            <div class="card-content">
+                                <h3>Our "Cute" Timeline</h3>
+                                <p>See how our "cute" messages have grown with our love</p>
+                                <a class="viz-link" href="love_timeline_cute.html">View Chart</a>
+                            </div>
+                        </div>
+                    
+                        <div class="viz-card">
+                            <div class="card-content">
+                                <h3>Our "Baby" Timeline</h3>
+                                <p>See how our "baby" messages have grown with our love</p>
+                                <a class="viz-link" href="love_timeline_baby.html">View Chart</a>
+                            </div>
+                        </div>
+                    
+                        <div class="viz-card">
+                            <div class="card-content">
+                                <h3>Our "Beautiful" Timeline</h3>
+                                <p>See how our "beautiful" messages have grown with our love</p>
+                                <a class="viz-link" href="love_timeline_beautiful.html">View Chart</a>
+                            </div>
+                        </div>
+                    
+                        <div class="viz-card">
+                            <div class="card-content">
+                                <h3>Our "Hug" Timeline</h3>
+                                <p>See how our "hug" messages have grown with our love</p>
+                                <a class="viz-link" href="love_timeline_hug.html">View Chart</a>
+                            </div>
+                        </div>
+                    
+                    </div>
+                    
+                    <div class="footer">
+                        <p>Made with <span class="heart-icon">❤️</span> for your birthday</p>
+                    </div>
+                </div>
+
+                <script>
+                    // Heart rain animation
+                    function createHeart() {
+                        const heart = document.createElement('div');
+                        heart.classList.add('heart');
+                        
+                        // Random heart emoji
+                        const hearts = ['❤️', '💖', '💗', '💕', '💓', '💘', '💝', '💞'];
+                        heart.innerHTML = hearts[Math.floor(Math.random() * hearts.length)];
+                        
+                        // Random position and size
+                        heart.style.left = Math.random() * 100 + 'vw';
+                        const size = Math.random() * 2 + 0.8;
+                        heart.style.fontSize = size + 'rem';
+                        
+                        // Random fall duration
+                        const duration = Math.random() * 5 + 3;
+                        heart.style.animationDuration = duration + 's';
+                        
+                        document.body.appendChild(heart);
+                        
+                        // Remove hearts after animation completes
+                        setTimeout(() => {
+                            heart.remove();
+                        }, duration * 1000);
+                    }
+                    
+                    // Create hearts at regular intervals
+                    setInterval(createHeart, 300);
+                    
+                    // Create initial hearts
+                    for (let i = 0; i < 15; i++) {
+                        setTimeout(createHeart, 100 * i);
+                    }
+                </script>
+            </body>
+            </html>
+            

@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reaction Emojis</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+      padding: 1rem;
+      max-width: 1200px;
+      margin: 0 auto;
+      background-color: #f8fafc;
+    }
+    
+    .container {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+    
+    .user-section {
+      border: 1px solid #e5e7eb;
+      border-radius: 0.5rem;
+      padding: 1.5rem;
+      background: white;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    }
+    
+    .user-header {
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+      color: #1f2937;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid #e5e7eb;
+    }
+    
+    .emoji-grid {
+      display: grid;
+      gap: 0.75rem;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    }
+    
+    .emoji-item {
+      display: flex;
+      align-items: center;
+      padding: 0.75rem;
+      border: 1px solid #e5e7eb;
+      border-radius: 0.375rem;
+      background: #f9fafb;
+      transition: transform 0.1s ease-in-out;
+    }
+    
+    .emoji-item:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+    
+    .emoji {
+      font-size: 1.5rem;
+      margin-right: 0.75rem;
+      min-width: 2rem;
+    }
+    
+    .count {
+      margin-left: auto;
+      font-weight: bold;
+      color: #4b5563;
+      background: #e5e7eb;
+      padding: 0.25rem 0.5rem;
+      border-radius: 0.25rem;
+    }
+    
+    @media (max-width: 640px) {
+      .emoji-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .emoji-item {
+        font-size: 0.875rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="user-section">
+      <div class="user-header">Arushi's Emoji Reactions</div>
+      <div class="emoji-grid">
+        <div class="emoji-item"><span class="emoji">💕</span> Heart (Pink) <span class="count">17,829</span></div>
+        <div class="emoji-item"><span class="emoji">😭</span> Crying Face <span class="count">653</span></div>
+        <div class="emoji-item"><span class="emoji">🎀</span> Ribbon <span class="count">1,048</span></div>
+        <div class="emoji-item"><span class="emoji">🤭</span> Hand Over Mouth <span class="count">137</span></div>
+        <div class="emoji-item"><span class="emoji">❤️</span> Red Heart <span class="count">17</span></div>
+        <div class="emoji-item"><span class="emoji">🙈</span> See-No-Evil Monkey <span class="count">220</span></div>
+        <div class="emoji-item"><span class="emoji">🗣️</span> Speaking Head <span class="count">46</span></div>
+        <div class="emoji-item"><span class="emoji">💋</span> Kiss Mark <span class="count">179</span></div>
+        <div class="emoji-item"><span class="emoji">😔</span> Pensive Face <span class="count">49</span></div>
+        <div class="emoji-item"><span class="emoji">🔥</span> Fire <span class="count">23</span></div>
+        <div class="emoji-item"><span class="emoji">😡</span> Angry Face <span class="count">3</span></div>
+        <div class="emoji-item"><span class="emoji">😐</span> Neutral Face <span class="count">2</span></div>
+        <div class="emoji-item"><span class="emoji">😟</span> Worried Face <span class="count">4</span></div>
+        <div class="emoji-item"><span class="emoji">💦</span> Sweat Droplets <span class="count">15</span></div>
+        <div class="emoji-item"><span class="emoji">💔</span> Broken Heart <span class="count">13</span></div>
+        <div class="emoji-item"><span class="emoji">😝</span> Squinting Face with Tongue <span class="count">8</span></div>
+        <div class="emoji-item"><span class="emoji">🤡</span> Clown Face <span class="count">14</span></div>
+        <div class="emoji-item"><span class="emoji">☹️</span> Frowning Face <span class="count">2</span></div>
+        <div class="emoji-item"><span class="emoji">😯</span> Hushed Face <span class="count">11</span></div>
+        <div class="emoji-item"><span class="emoji">😞</span> Disappointed Face <span class="count">16</span></div>
+        <div class="emoji-item"><span class="emoji">🖕</span> Middle Finger <span class="count">15</span></div>
+        <div class="emoji-item"><span class="emoji">🚶‍♀️</span> Woman Walking <span class="count">1</span></div>
+        <div class="emoji-item"><span class="emoji">👎</span> Thumbs Down <span class="count">9</span></div>
+        <div class="emoji-item"><span class="emoji">💯</span> Hundred Points <span class="count">8</span></div>
+        <div class="emoji-item"><span class="emoji">🙄</span> Rolling Eyes <span class="count">11</span></div>
+        <div class="emoji-item"><span class="emoji">👨‍❤️‍💋‍👨</span> Kiss (Men) <span class="count">6</span></div>
+        <div class="emoji-item"><span class="emoji">🙏</span> Folded Hands <span class="count">6</span></div>
+        <div class="emoji-item"><span class="emoji">😍</span> Heart Eyes <span class="count">8</span></div>
+        <div class="emoji-item"><span class="emoji">👍</span> Thumbs Up <span class="count">14</span></div>
+        <div class="emoji-item"><span class="emoji">😘</span> Face Blowing Kiss <span class="count">10</span></div>
+        <div class="emoji-item"><span class="emoji">💏</span> Kiss <span class="count">1</span></div>
+        <div class="emoji-item"><span class="emoji">😂</span> Face with Tears of Joy <span class="count">6</span></div>
+        <div class="emoji-item"><span class="emoji">😏</span> Smirking Face <span class="count">1</span></div>
+        <div class="emoji-item"><span class="emoji">😈</span> Smiling Face with Horns <span class="count">8</span></div>
+        <div class="emoji-item"><span class="emoji">🔪</span> Kitchen Knife <span class="count">64</span></div>
+        <div class="emoji-item"><span class="emoji">👙</span> Bikini <span class="count">1</span></div>
+        <div class="emoji-item"><span class="emoji">🤤</span> Drooling Face <span class="count">4</span></div>
+        <div class="emoji-item"><span class="emoji">🤞</span> Crossed Fingers <span class="count">4</span></div>
+        <div class="emoji-item"><span class="emoji">🤫</span> Shushing Face <span class="count">1</span></div>
+        <div class="emoji-item"><span class="emoji">😊</span> Smiling Face <span class="count">4</span></div>
+        <div class="emoji-item"><span class="emoji">🦢</span> Swan <span class="count">3</span></div>
+        <div class="emoji-item"><span class="emoji">🤑</span> Money Face <span class="count">3</span></div>
+        <div class="emoji-item"><span class="emoji">😢</span> Crying Face <span class="count">16</span></div>
+        <div class="emoji-item"><span class="emoji">🤣</span> Rolling on Floor Laughing <span class="count">2</span></div>
+        <div class="emoji-item"><span class="emoji">👅</span> Tongue <span class="count">2</span></div>
+        <div class="emoji-item"><span class="emoji">🍬</span> Candy <span class="count">6</span></div>
+        <div class="emoji-item"><span class="emoji">🤍</span> White Heart <span class="count">1</span></div>
+        <div class="emoji-item"><span class="emoji">🖕🏿</span> Middle Finger Dark Skin Tone <span class="count">2</span></div>
+        <div class="emoji-item"><span class="emoji">💐</span> Bouquet <span class="count">3</span></div>
+        <div class="emoji-item"><span class="emoji">😺</span> Grinning Cat <span class="count">4</span></div>
+        <div class="emoji-item"><span class="emoji">🗿</span> Moai <span class="count">3</span></div>
+        <div class="emoji-item"><span class="emoji">🎅</span> Santa Claus <span class="count">1</span></div>
+        <div class="emoji-item"><span class="emoji">👺</span> Goblin <span class="count">2</span></div>
+        <div class="emoji-item"><span class="emoji">🤓</span> Nerd Face <span class="count">4</span></div>
+        <div class="emoji-item"><span class="emoji">😰</span> Anxious Face with Sweat <span class="count">5</span></div>
+        <div class="emoji-item"><span class="emoji">🤢</span> Nauseated Face <span class="count">1</span></div>
+        <div class="emoji-item"><span class="emoji">🤰</span> Pregnant Woman <span class="count">7</span></div>
+        <div class="emoji-item"><span class="emoji">👦🏿</span> Boy Dark Skin Tone <span class="count">1</span></div>
+        <div class="emoji-item"><span class="emoji">🧑🏻‍🦯</span> Person with White Cane <span class="count">3</span></div>
+        <div class="emoji-item"><span class="emoji">🤮</span> Face Vomiting <span class="count">1</span></div>
+        <div class="emoji-item"><span class="emoji">😎</span> Smiling Face with Sunglasses <span class="count">2</span></div>
+        <div class="emoji-item"><span class="emoji">😣</span> Persevering Face <span class="count">2</span></div>
+        <div class="emoji-item"><span class="emoji">☠️</span> Skull and Crossbones <span class="count">1</span></div>
+        <div class="emoji-item"><span class="emoji">👽</span> Alien <span class="count">1</span></div>
+        <div class="emoji-item"><span class="emoji">💍</span> Ring <span class="count">1</span></div>
+        <div class="emoji-item"><span class="emoji">💀</span> Skull <span class="count">1</span></div>
+      </div>
+    </div>
+    
+    <div class="user-section">
+      <div class="user-header">Praneeth's Emoji Reactions</div>
+      <div class="emoji-grid">
+        <div class="emoji-item"><span class="emoji">🤍</span> White Heart <span class="count">5,579</span></div>
+        <div class="emoji-item"><span class="emoji">❤️</span> Red Heart <span class="count">2,491</span></div>
+        <div class="emoji-item"><span class="emoji">😭</span> Crying Face <span class="count">744</span></div>
+        <div class="emoji-item"><span class="emoji">🎀</span> Ribbon <span class="count">691</span></div>
+        <div class="emoji-item"><span class="emoji">💞</span> Revolving Hearts <span class="count">453</span></div>
+        <div class="emoji-item"><span class="emoji">💙</span> Blue Heart <span class="count">349</span></div>
+        <div class="emoji-item"><span class="emoji">🌹</span> Rose <span class="count">215</span></div>
+        <div class="emoji-item"><span class="emoji">💔</span> Broken Heart <span class="count">140</span></div>
+        <div class="emoji-item"><span class="emoji">🔥</span> Fire <span class="count">138</span></div>
+        <div class="emoji-item"><span class="emoji">👎</span> Thumbs Down <span class="count">109</span></div>
+        <div class="emoji-item"><span class="emoji">😢</span> Crying Face <span class="count">93</span></div>
+        <div class="emoji-item"><span class="emoji">💋</span> Kiss Mark <span class="count">71</span></div>
+        <div class="emoji-item"><span class="emoji">☠️</span> Skull and Crossbones <span class="count">56</span></div>
+        <div class="emoji-item"><span class="emoji">👍</span> Thumbs Up <span class="count">41</span></div>
+        <div class="emoji-item"><span class="emoji">💀</span> Skull <span class="count">39</span></div>
+        <div class="emoji-item"><span class="emoji">🤡</span> Clown Face <span class="count">32</span></div>
+        <div class="emoji-item"><span class="emoji">🍑</span> Peach <span class="count">29</span></div>
+        <div class="emoji-item"><span class="emoji">😮</span> Face with Open Mouth <span class="count">23</span></div>
+        <div class="emoji-item"><span class="emoji">😡</span> Angry Face <span class="count">20</span></div>
+        <div class="emoji-item"><span class="emoji">😂</span> Face with Tears of Joy <span class="count">16</span></div>
+        <div class="emoji-item"><span class="emoji">😏</span> Smirking Face <span class="count">3</span></div>
+        <div class="emoji-item"><span class="emoji">🌈</span> Rainbow <span class="count">3</span></div>
+        <div class="emoji-item"><span class="emoji">🤐</span> Zipper-Mouth Face <span class="count">4</span></div>
+        <div class="emoji-item"><span class="emoji">🤗</span> Hugging Face <span class="count">1</span></div>
+        <div class="emoji-item"><span class="emoji">🤓</span> Nerd Face <span class="count">1</span></div>
+        <div class="emoji-item"><span class="emoji">😃</span> Grinning Face with Big Eyes <span class="count">1</span></div>
+        <div class="emoji-item"><span class="emoji">0️⃣</span> Zero <span class="count">1</span></div>
+        <div class="emoji-item"><span class="emoji">😈</span> Smiling Face with Horns <span class="count">4</span></div>
+        <div class="emoji-item"><span class="emoji">😘</span> Face Blowing a Kiss <span class="count">2</span></div>
+        <div class="emoji-item"><span class="emoji">☕</span> Hot Beverage <span class="count">4</span></div>
+        <div class="emoji-item"><span class="emoji">🏳️‍🌈</span> Rainbow Flag <span class="count">3</span></div>
+        <div class="emoji-item"><span class="emoji">👽</span> Alien <span class="count">1</span></div>
+        <div class="emoji-item"><span class="emoji">🎤</span> Microphone <span class="count">1</span></div>
+        <div class="emoji-item"><span class="emoji">😍</span> Smiling Face with Heart-Eyes <span class="count">3</span></div>
+        <div class="emoji-item"><span class="emoji">🐊</span> Crocodile <span class="count">2</span></div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
