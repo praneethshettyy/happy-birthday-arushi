@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Chat Statistics Dashboard</title>
+        <style>
+            /* Basic reset */
+            body, html {
+                margin: 0;
+                padding: 0;
+                font-family: 'Comic Sans MS', cursive, sans-serif;
+                background: linear-gradient(135deg, #ffe5e5, #e5f0ff);
+                min-height: 100vh;
+                position: relative;
+                overflow-x: hidden;
+            }
+
+            /* Balloon animation */
+            @keyframes float {
+                0% { transform: translateY(0) rotate(0deg); }
+                50% { transform: translateY(-20px) rotate(5deg); }
+                100% { transform: translateY(0) rotate(0deg); }
+            }
+
+            /* Confetti decoration */
+            .confetti {
+                position: fixed;
+                width: 10px;
+                height: 10px;
+                background-color: #ff69b4;
+                clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+                animation: fall 4s linear infinite;
+            }
+
+            @keyframes fall {
+                0% { transform: translateY(-100px) rotate(0deg); }
+                100% { transform: translateY(100vh) rotate(360deg); }
+            }
+
+            /* Container styling */
+            .container {
+                max-width: 800px;
+                margin: 0 auto;
+                padding: 20px;
+                position: relative;
+                z-index: 1;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .header-section {
+                text-align: center;
+                margin-bottom: 30px;
+                width: 100%;
+            }
+
+            h1 {
+                color: #ff4081;
+                font-size: 2.5em;
+                text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+                margin-bottom: 10px;
+            }
+
+            .subtitle {
+                color: #666;
+                font-size: 1.1em;
+                margin-bottom: 30px;
+            }
+
+            .options-container {
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+                width: 100%;
+                max-width: 500px;
+                margin: 0 auto;
+            }
+
+            .viz-link {
+                background: white;
+                padding: 15px 25px;
+                border-radius: 20px;
+                box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+                text-align: center;
+            }
+
+            .viz-link:hover {
+                transform: translateY(-3px);
+                box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+            }
+
+            .viz-link a {
+                text-decoration: none;
+                color: #ff6b6b;
+                font-size: 1.2em;
+                display: block;
+            }
+
+            /* Balloon decorations - positioned away from content */
+            .balloon {
+                position: fixed;
+                width: 40px;
+                height: 50px;
+                border-radius: 50%;
+                animation: float 4s ease-in-out infinite;
+            }
+
+            .balloon::before {
+                content: '';
+                position: absolute;
+                bottom: -10px;
+                left: 20px;
+                width: 2px;
+                height: 20px;
+                background: #999;
+            }
+
+            /* Responsive design */
+            @media (max-width: 768px) {
+                .container {
+                    padding: 15px;
+                }
+                
+                h1 {
+                    font-size: 2em;
+                }
+
+                .subtitle {
+                    font-size: 1em;
+                    padding: 0 15px;
+                }
+
+                .viz-link {
+                    margin: 0 15px;
+                    padding: 12px 20px;
+                }
+            }
+
+            @media (max-width: 480px) {
+                h1 {
+                    font-size: 1.8em;
+                }
+
+                .viz-link a {
+                    font-size: 1.1em;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="header-section">
+                <h1>Chat Statistics Dashboard</h1>
+                <div class="subtitle">Explore your chat patterns, activity times, and participation insights</div>
+            </div>
+            
+            <div class="options-container">
+                <div class="viz-link">
+                    <a href="activity_heatmap.html">🕒 Active Hours Analysis</a>
+                </div>
+                <div class="viz-link">
+                    <a href="message_timeline.html">📊 Message Frequency</a>
+                </div>
+                <div class="viz-link">
+                    <a href="participant_distribution.html">👥 Most Active Members</a>
+                </div>
+                <div class="viz-link">
+                    <a href="media_distribution.html">📸 Media Sharing Stats</a>
+                </div>
+                <div class="viz-link">
+                    <a href="reaction_emojis.html">😄 Popular Reactions</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Decorative elements positioned away from content -->
+        <div class="balloon" style="top: 70%; left: 5%; animation-delay: 0s; background: #ff69b4;"></div>
+        <div class="balloon" style="top: 75%; right: 5%; animation-delay: 1s; background: #66ff66;"></div>
+        <div class="balloon" style="top: 65%; left: 85%; animation-delay: 2s; background: #ff9933;"></div>
+        
+        <div class="confetti" style="left: 20%; animation-delay: 0s; background: #ff69b4;"></div>
+        <div class="confetti" style="left: 40%; animation-delay: 1s; background: #66ff66;"></div>
+        <div class="confetti" style="left: 60%; animation-delay: 2s; background: #ff9933;"></div>
+        <div class="confetti" style="left: 80%; animation-delay: 3s; background: #66ccff;"></div>
+    </body>
+</html>
